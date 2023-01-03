@@ -107,9 +107,10 @@ const generateAutoCard = (brand, color, year) => {
     return `
         <div class="autoCard">
             <h2>${brand.toUpperCase()} ${year}</h2>
-            <p>Автомобиль ${brand.toUpperCase()} - ${year} года. Возраст авто - ${curYear - year} лет.</p>
-            <p>Цвет: ${color}</p>
-            <button type='button' class='btn'>Удалить</button>
+            <p>Auto ${brand.toUpperCase()} - ${year} year. </p>
+            <p>Year of manufacture - ${curYear - year} year. </p>
+            <p>Color: ${color}</p>
+            <button type='button' class='btn'>Delete</button>
         </div>
     `;
 }
@@ -131,9 +132,9 @@ carsDiv.classList.add('autos');
 
 /* Создать 3 карточки авто, используя функцию generateAutoCard */ 
 const carsList = [
-    {brand: 'Tesla', year: 2015, color: 'Красный'},
-    {brand: 'Lexus', year: 2016, color: 'Серебристый'},
-    {brand: 'Nissan', year: 2012, color: 'Черный'},
+    {brand: 'Tesla', year: 2015, color: 'Red'},
+    {brand: 'Lexus', year: 2016, color: 'Green'},
+    {brand: 'Nissan', year: 2012, color: 'Black'},
 ]
 
 const carsHTML = carsList.map(car => {
