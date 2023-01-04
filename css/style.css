@@ -25,6 +25,7 @@
   border-right: 100px solid transparent;
   border-bottom: 200px solid yellow;
   transition: .3s ease-in-out;
+  cursor: pointer;
 }
 
 
