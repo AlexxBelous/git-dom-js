@@ -1,203 +1,54 @@
-// Создать div
+/*******************************************
+  При клике на черный квадрат,
+  который находится на странице(элемент div c 
+  классом square) необходимо добавлять еще одни 
+  класс с именем green
+ *******************************************/
 
-// Добавить к нему класс wrapper
+let square = document.querySelector('.square');
 
-// Поместить его внутрь тэга body
+square.addEventListener('click', function() {
+    square.classList.add('green');
+})
 
-// Создать заголовок H1 "DOM (Document Object Model)"
 
-// Добавить H1 перед DIV с классом wrapper
 
-// Создать список <ul></ul>
-// Добавить в него 3 элемента с текстом "один, два, три"
+/*******************************************
+  При клике на зеленый круг,
+  который находится на странице(элемент div c 
+  классом square-green) необходимо удалить второй 
+  класс с именем green.
+ *******************************************/
 
 
-// Поместить список внутрь элемента с классом wrapper
+  let circle = document.querySelector('.circle');
 
-// =================================================
-// Создать изображение
+  circle.addEventListener('click', function() {
+      circle.classList.remove('green');
+  })
 
-// Добавить следующие свойства к изображению
-// 1. Добавить атрибут source - https://picsum.photos/240
 
-// 2. Добавить атрибут width со значением 240
 
-// 3. Добавить класс super
 
-// 4. Добавить свойство alt со значением "Super Man"
+  /*******************************************
+  При клике на желтый треугольник, который находится 
+  на странице(элемент div c классом triangle)
+  необходимо проверить существует ли в блоке класс 
+  yellow и если существует, то необходимо его удалить 
+  и на его место добавить второй класс с именем green.
+  ******************************************/
 
-// Поместить изображение внутрь элемента с классом wrapper
 
 
+  let triangle = document.querySelector('.triangle');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// /* ----Создать div */ 
-// const div = document.createElement('div');
-
-
-
-
-
-
-
-// /* ----Добавить к нему класс wrapper */ 
-// div.classList.add('wrapper');
-
-
-
-
-
-
-
-
-// /* ----Поместить его внутрь тэга body */ 
-// const body = document.body;
-// body.appendChild(div);
-
-
-
-
-
-
-
-
-// /* ----Создать заголовок h1 и вставьте текст - "DOM (Document Object Model)" */ 
-// const header = document.createElement('h1');
-// header.textContent = 'DOM (Document Object Model)';
-
-
-
-
-
-
-
-// /* ----Добавить H1 перед DIV с классом wrapper */ 
-// div.insertAdjacentElement('beforebegin', header);
-
-
-
-
-
-
-
-// /*  -----Создать список <ul></ul> и добавить в него три элемента с текстом один, два, три*/
-// const ul = `
-//     <ul>
-//         <li>один</li>
-//         <li>два</li>
-//         <li>три</li>
-//     </ul>
-// `;
-
-
-
-
-
-
-
-
-// /* ----Поместить список внутрь элемента с классом wrapper */ 
-// div.innerHTML = ul;
-
-
-
-
-
-
-
-
-
-
-// /* ----Создать изображение */ 
-// const img = document.createElement('img');
-
-
-
-
-
-
-
-
-
-
-// /* ------Добавить следующие свойства к изображению: */ 
-// /* 1. Добавить атрибут source */ 
-// img.src = 'https://picsum.photos/240';
-
-// /* 2. Добавить атрибут width со значением 240 */ 
-// img.width = 240;
-
-// /* 3. Добавить класс super */ 
-// img.classList.add('super');
-
-// /* 4. Добавить свойство alt со значением "Super Man" */ 
-// img.alt = 'Super Man';
-
-
-
-
-
-
-
-// /* ----Поместить изображение внутрь элемента с классом wrapper */ 
-// div.appendChild(img)
-
-
-
-
+  triangle.addEventListener('click', function() {
+    if (triangle.classList.contains('yellow')) {
+        triangle.classList.add('green')
+        triangle.classList.remove('yellow')
+    }
+    else {
+        triangle.classList.add('yellow')
+        triangle.classList.remove('green');
+    }
+  })
