@@ -1,10 +1,8 @@
 
   /*******************************************
-  При клике на желтый треугольник, который находится 
-  на странице(элемент div c классом triangle)
-  необходимо проверить существует ли в блоке класс 
-  yellow и если существует, то необходимо его удалить 
-  и на его место добавить второй класс с именем green.
+  При клике на элемент списка, который находится 
+  на странице необходимо добавить второй класс с именем red, 
+  а при следующем клике этот же класс удалять.
   ******************************************/
 
 
@@ -12,76 +10,10 @@
 
 
 
+const list = document.querySelector('.list');
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // let triangle = document.querySelector('.triangle');
-
-  // triangle.addEventListener('click', function() {
-  //   if (triangle.classList.contains('yellow')) {
-  //       triangle.classList.add('green')
-  //       triangle.classList.remove('yellow')
-  //   }
-  //   else {
-  //       triangle.classList.add('yellow')
-  //       triangle.classList.remove('green');
-  //   }
-  // })
+list.addEventListener('click', (event) => {
+  const target = event.target
+  console.log(target);
+  target.classList.toggle('red');
+})

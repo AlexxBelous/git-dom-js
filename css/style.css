@@ -39,3 +39,12 @@
   background-color: blue;
   border-radius: 25%;
 }
+
+
+.list {
+  font-size: 1.5rem;
+}
+
+.red {
+  color: red;
+}
